@@ -1,0 +1,9 @@
+name: sqa
+dependencies:
+  - python=3.7
+  - pip=20.0.2
+  - pip:
+    - tqdm==4.45.0
+    - scipy==1.4.1
+    - cython==0.29.16
+    - matplotlib==3.2.1

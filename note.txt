@@ -1,0 +1,2 @@
+1. Install Anaconda - https://www.anaconda.com/products/distribution/start-coding-immediately
+2. conda env create --name SQA --file=environments.yml
