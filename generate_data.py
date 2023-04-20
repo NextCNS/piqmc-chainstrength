@@ -1,6 +1,6 @@
 import random
 
-N = 15
+N = 45
 
 def generate_data():
     for i in range(1, N):

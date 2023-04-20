@@ -38,7 +38,6 @@ def GA(model, args):
 
     # Initialization
     chain_strength_population = np.random.uniform(ALPHA, BETA, size=(POPULATION_SIZE, GENE_LENGTH))
-    # print("Initial population is ", chain_strength_population)
 
     # Main loop
     for generation in range(NUM_GENERATIONS):
