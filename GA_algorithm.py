@@ -4,82 +4,60 @@ import os
 import numpy as np
 from models import SK
 from python_interface import QuantumPIAnneal
+import dimod
+import math
+from dwave.embedding.chain_strength import uniform_torque_compensation
 
 # Parameters
-POPULATION_SIZE = 10
-GENE_LENGTH = 10
-NUM_GENERATIONS = 1
-CROSSOVER_RATE = 0.6
-MUTATION_RATE = 0.03
-ALPHA = 0.0
-BETA = 1.0
-RANDOM_SEED = 42
-TOP_N = 3
+NUM_GENERATIONS = 5
 
 
-def fitness_function(chain_strength_list,model, args):
+output = []
+
+def first_and_last_occurrence(target_value, input_dict):
+    first_occurrence = None
+    last_occurrence = None
+
+    for key, value in input_dict.items():
+        if value == target_value:
+            if first_occurrence is None:
+                first_occurrence = key
+            last_occurrence = key
+
+    return first_occurrence, last_occurrence
+
+def fitness_function(chain_strength,model, args):
     P = args.P
     Loaded = []
-    fitness = []
-    for value in chain_strength_list:
-        args.chain_strength = value
-        Energies = np.zeros((args.numruns, len(args.tau_schedule),int(P)), np.float64)
-        print(f"This is the chain strength being test {value}")
-        for annealingrun in range(len(Loaded)+1, args.numruns + 1):
-            Q = QuantumPIAnneal(model, latticetype = "FullyConnected",  **vars(args))
-            Energies[annealingrun-1], config = Q.perform_tau_schedule()
-        fitness.append(np.amin(Energies))
-    return fitness
+    args.chain_strength = chain_strength
+    Energies = np.zeros((args.numruns, len(args.tau_schedule),int(P)), np.float64)
+    for annealingrun in range(len(Loaded)+1, args.numruns + 1):
+        Q = QuantumPIAnneal(model, latticetype = "FullyConnected",  **vars(args))
+        Energies[annealingrun-1], config = Q.perform_tau_schedule()
+    return np.amin(Energies)
 
 
 def GA(model, args):
-    # Set the random seed
-    np.random.seed(RANDOM_SEED)
-
+    chain_strength_candidates = []
     # Initialization
-    chain_strength_population = np.random.uniform(ALPHA, BETA, size=(POPULATION_SIZE, GENE_LENGTH))
-
+    chain_strength_population = np.arange(0, args.chain_strength, args.step).tolist()
     # Main loop
     for generation in range(NUM_GENERATIONS):
         # Fitness evaluation
-        fitness_scores = np.mean([fitness_function(chain_strength_list, model, args) for chain_strength_list in chain_strength_population], axis=1)
+        fitness_scores = {}
+        for c in chain_strength_population:
+            fitness_scores[c] = fitness_function(c, model, args)
         print(f"Fitness_scores is of P at generation {generation} is {fitness_scores}")
-
-        # Selection (tournament selection)
-        offspring_population = np.zeros_like(chain_strength_population)
-        for i in range(POPULATION_SIZE):
-            tournament_indices = np.random.choice(POPULATION_SIZE, size=2)
-            winner_index = tournament_indices[np.argmax(fitness_scores[tournament_indices])]
-            offspring_population[i] = chain_strength_population[winner_index]
-
-        # Crossover
-        for i in range(0, POPULATION_SIZE, 2):
-            if np.random.rand() < CROSSOVER_RATE:
-                parent1 = offspring_population[i]
-                parent2 = offspring_population[i + 1]
-                crossover_point = np.random.randint(0, GENE_LENGTH)
-                offspring1 = np.concatenate((parent1[:crossover_point], parent2[crossover_point:]))
-                offspring2 = np.concatenate((parent2[:crossover_point], parent1[crossover_point:]))
-                offspring_population[i] = offspring1
-                offspring_population[i + 1] = offspring2
-
-        # Mutation
-        mutation_population = np.copy(offspring_population)
-        mutation_indices = np.random.rand(POPULATION_SIZE, GENE_LENGTH) < MUTATION_RATE
-        mutation_values = np.random.uniform(ALPHA, BETA, size=(POPULATION_SIZE, GENE_LENGTH))
-        mutation_population[mutation_indices] = mutation_values[mutation_indices]
-
-        # Replacement
-        chain_strength_population = mutation_population
-
-    # Get the top n optimal λ values
-    top_n_indices = np.argsort(fitness_scores)[-TOP_N:]
-    optimal_lambdas = np.mean(chain_strength_population[top_n_indices], axis=1)
-    print(f"Top {TOP_N} optimal lambda values:")
-    for i, optimal_lambda in enumerate(optimal_lambdas, 1):
-        print(f"{i}. {optimal_lambda}")
-
-
+        min_energy = min(fitness_scores.values())
+        fist_chain, last_chain = first_and_last_occurrence(min_energy, fitness_scores)
+        print(fist_chain, last_chain, args.step,   "hehe")
+        chain_strength_candidates.append(last_chain)
+        if fist_chain ==  last_chain:
+            break
+        else:
+            chain_strength_population = np.arange(fist_chain, args.chain_strength, args.step).tolist()
+    print(chain_strength_candidates, "final")
+    return max(chain_strength_candidates)
 if __name__ == "__main__":
     if not os.path.exists('./results/'):
         os.mkdir('./results')
@@ -87,13 +65,13 @@ if __name__ == "__main__":
         os.mkdir('./results/SK')
     if not os.path.exists('./results/SK/PIQMC'):
         os.mkdir('./results/SK/PIQMC')
-
+    N = 5
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--seed', default=1)
-    parser.add_argument('--P', default=3)
-    parser.add_argument('--gamma_0', default=0.01, type=float)
-    parser.add_argument('--tau_schedule', default=[50])
+    parser.add_argument('--P', default=int(N/4) + 1)
+    parser.add_argument('--gamma_0', default=0.1, type=float)
+    parser.add_argument('--tau_schedule', default=[1000])
     parser.add_argument('--mcsteps', default=5) #Number of sweeps
     parser.add_argument('--numruns', default=1, type=int)
 
@@ -102,12 +80,21 @@ if __name__ == "__main__":
     P = args.P
     numruns = args.numruns
 
-    N = 5
-
-    interactions_fname = './data/SK_N'+str(N)+'/'+str(N)+'_SK_seed'+str(realization)+'.txt'
+    interactions_fname = './data/PIMC/SK_N'+str(N)+'/'+str(N)+'_SK_seed'+str(realization)+'.txt'
     model = SK(nspins=N, interactions_fname=interactions_fname)
+    loaded = np.loadtxt(interactions_fname)
+    coupling = {}
+    sum = 0
+    for i, j, val in loaded:
+        coupling[(i,j)] = -1 * val
+        sum = sum + math.pow(val, 2)
 
-    # Energies = np.zeros((numruns, len(args.tau_schedule),int(P)), np.float64)
-    # checkpointfile = './results/SK/PIQMC/SK_N'+str(N)+'_PIQMC_realization'+str(realization)+'_Energies.npy'
-    
-    GA(model, args)
+    linear = [0] * N
+    bqm = dimod.BQM.from_ising(linear,coupling)
+    step = (math.sqrt(sum)) / (N)
+    print("step is:" ,step)
+    chain_strength_initial = uniform_torque_compensation(bqm)
+    args.chain_strength = chain_strength_initial
+    args.step = step
+    suggest_chain_strength = GA(model, args)
+    print(suggest_chain_strength)
