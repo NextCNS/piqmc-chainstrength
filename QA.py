@@ -11,10 +11,10 @@ sampler = EmbeddingComposite(DWaveSampler(solver={'topology__type': 'chimera'}))
 
 
 # N = [5,10,15,20,25,30,35,40,45]
-N = [20]
+N = [45]
 
 for index, value in enumerate(N):
-    interactions_fname = './data/SK_N'+str(value)+'/'+str(value)+'_SK_seed1'+'.txt'
+    interactions_fname = './data/QA/SK_N'+str(value)+'/'+str(value)+'_SK_seed1'+'.txt'
     loaded = np.loadtxt(interactions_fname)
     coupling = {}
     for i, j, val in loaded:

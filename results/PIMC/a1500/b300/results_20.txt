@@ -1,1 +1,20 @@
 ------annealing = 1500, numread = 300
+sampleset info: {'timing': {'qpu_sampling_time': 560988.0, 'qpu_anneal_time_per_sample': 1500.0, 'qpu_readout_time_per_sample': 349.42, 'qpu_access_time': 572058.91, 'qpu_access_overhead_time': 1215.09, 'qpu_programming_time': 11070.91, 'qpu_delay_time_per_sample': 20.54, 'post_processing_overhead_time': 454.0, 'total_post_processing_time': 454.0}, 'problem_id': '781f5868-380f-400f-b6b9-f8b95109f838', 'embedding_context': {'embedding': {1: (1957, 1546, 1949, 1941, 1933, 1674, 1802, 1930), 0: (1670, 1562, 1690, 1702, 1678, 1686, 1694), 2: (1573, 1565, 1538, 1541, 1549, 1557), 3: (1937, 1942, 1950, 1958, 1571, 1699, 1827, 1955), 4: (1671, 1673, 1679, 1703, 1695, 1545, 1687), 5: (1540, 1553, 1572, 1564, 1548, 1556), 6: (1681, 1701, 1693, 1685, 1667, 1669, 1539, 1677), 7: (1946, 1818, 1698, 1826, 1570, 1831, 1823), 8: (1547, 1675, 1803, 1948, 1940, 1932, 1931), 9: (1552, 1680, 1936, 1820, 1812, 1808), 10: (1951, 1664, 1792, 1943, 1935, 1536, 1920, 1927), 11: (1829, 1821, 1813, 1805, 1544, 1672, 1800, 1928), 12: (1947, 1563, 1819, 1691), 13: (1542, 1550, 1574, 1566, 1558), 14: (1561, 1945, 1817, 1689), 15: (1956, 1828, 1959, 1953, 1569, 1697, 1825), 16: (1815, 1684, 1939, 1555, 1683, 1811), 17: (1543, 1575, 1567, 1551, 1559), 18: (1830, 1822, 1938, 1814, 1554, 1682, 1810), 19: (1700, 1560, 1692, 1944, 1816, 1688)}, 'chain_break_method': 'majority_vote', 'embedding_parameters': {}, 'chain_strength': 1.9959267202802318}, 'warnings': [{'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (1957, 1546, 1949, 1941, 1933, 1674, 1802, 1930), 'source_variables': [1]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (1937, 1942, 1950, 1958, 1571, 1699, 1827, 1955), 'source_variables': [3]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (1681, 1701, 1693, 1685, 1667, 1669, 1539, 1677), 'source_variables': [6]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (1951, 1664, 1792, 1943, 1935, 1536, 1920, 1927), 'source_variables': [10]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (1829, 1821, 1813, 1805, 1544, 1672, 1800, 1928), 'source_variables': [11]}}]} 
+sampleset record: [[-1 -1  1 ... -1 -1  1]
+ [ 1 -1  1 ...  1  1 -1]
+ [-1  1 -1 ... -1 -1  1]
+ ...
+ [-1 -1  1 ... -1  1  1]
+ [ 1 -1  1 ...  1  1 -1]
+ [-1 -1  1 ...  1  1 -1]] 
+sampleset energy: [-29.78 -27.68 -27.68 -29.22 -29.22 -28.5  -28.88 -28.76 -25.9  -25.9
+ -28.5  -28.5  -28.5  -27.68 -26.14 -26.08 -29.22 -26.86 -26.86 -26.5
+ -26.5  -27.58 -27.58 -27.54 -26.5  -27.32 -27.32 -27.3  -27.3  -25.42
+ -25.42 -28.5  -26.76 -26.76 -23.46 -26.86 -26.86 -25.34 -25.34 -27.04
+ -27.54 -27.68 -27.68 -26.86 -28.5  -26.08 -26.4  -28.5  -28.5  -26.76
+ -26.6  -27.68 -27.3  -26.42 -25.04 -25.04 -25.4  -26.28 -25.34 -25.34
+ -24.68 -25.68 -23.7  -25.68 -28.76 -24.46 -24.46 -24.46 -24.46 -25.64
+ -24.18 -23.58 -25.5  -25.4  -26.5  -28.5  -25.02 -21.98 -26.6  -23.4
+ -25.04 -26.86 -23.42 -21.66 -24.64] 
+Chain strength: 1.9959267202802318, Ground state probability: 0.04666666666666667
+Ground state is: Sample(sample={0: -1, 1: -1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: -1, 9: 1, 10: -1, 11: -1, 12: 1, 13: 1, 14: -1, 15: 1, 16: 1, 17: -1, 18: -1, 19: 1}, energy=-29.780000000000012, num_occurrences=14, chain_break_fraction=0.0), Ground state energy: -29.780000000000012
