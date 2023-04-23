@@ -19,7 +19,7 @@ sampler = EmbeddingComposite(DWaveSampler(solver={'topology__type': 'chimera'}))
 # 45 5.234951058125942 5.352605097955065 4.340175646442815
 
 # N = [5,10,15,20,25,30,35,40,45]
-N = [30]
+N = [45]
 
 for index, value in enumerate(N):
     interactions_fname = './data/PIMC/SK_N'+str(value)+'/'+str(value)+'_SK_seed1'+'.txt'
@@ -32,7 +32,7 @@ for index, value in enumerate(N):
     print(bqm)
     num_reads = 400
     annealing = 2000
-    chain_strength = 3.902802411942817
+    chain_strength = 4.340175646442815
     sampleset = sampler.sample_ising(linear,coupling, num_reads=num_reads, chain_strength=chain_strength, annealing_time=annealing)
     # dwave.inspector.show(sampleset)
     # # Open a file to write the results

@@ -11,7 +11,7 @@ sampler = EmbeddingComposite(DWaveSampler(solver={'topology__type': 'chimera'}))
 
 
 # N = [5,10,15,20,25,30,35,40,45]
-N = [30]
+N = [45]
 
 for index, value in enumerate(N):
     interactions_fname = './data/QA/SK_N'+str(value)+'/'+str(value)+'_SK_seed1'+'.txt'
