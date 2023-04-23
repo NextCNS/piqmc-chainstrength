@@ -1,0 +1,28 @@
+------annealing = 1000, numread = 200
+sampleset info: {'timing': {'qpu_sampling_time': 273992.0, 'qpu_anneal_time_per_sample': 1000.0, 'qpu_readout_time_per_sample': 349.42, 'qpu_access_time': 284805.71, 'qpu_access_overhead_time': 947.29, 'qpu_programming_time': 10813.71, 'qpu_delay_time_per_sample': 20.54, 'total_post_processing_time': 1425.0, 'post_processing_overhead_time': 1425.0}, 'problem_id': 'cf0daecd-32ec-480e-9047-a7005043328c', 'embedding_context': {'embedding': {1: (1091,), 0: (1095,), 2: (1089, 1092), 3: (1093, 1090), 4: (1094, 1088)}, 'chain_break_method': 'majority_vote', 'embedding_parameters': {}, 'chain_strength': 1.5744875713958493}, 'warnings': []} 
+sampleset record: [[-1 -1 -1  1 -1]
+ [ 1  1  1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 1 -1 -1  1  1]
+ [-1 -1 -1 -1  1]] 
+sampleset energy: [-3.43 -3.43 -2.59 -1.83  1.11] 
+Chain strength: 1.5744875713958493, Ground state probability: 0.97
+Ground state is: Sample(sample={0: -1, 1: -1, 2: -1, 3: 1, 4: -1}, energy=-3.43, num_occurrences=88, chain_break_fraction=0.0), Ground state energy: -3.43
+------annealing = 1000, numread = 200
+sampleset info: {'timing': {'qpu_sampling_time': 273992.0, 'qpu_anneal_time_per_sample': 1000.0, 'qpu_readout_time_per_sample': 349.42, 'qpu_access_time': 284798.11, 'qpu_access_overhead_time': 881.89, 'qpu_programming_time': 10806.11, 'qpu_delay_time_per_sample': 20.54, 'total_post_processing_time': 558.0, 'post_processing_overhead_time': 558.0}, 'problem_id': '2ccfd177-0777-429d-adbb-65996d2055a6', 'embedding_context': {'embedding': {1: (116, 113), 0: (118, 115), 2: (112, 119), 3: (117,), 4: (114,)}, 'chain_break_method': 'majority_vote', 'embedding_parameters': {}, 'chain_strength': 1.5744875713958493}, 'warnings': []} 
+sampleset record: [[ 1  1  1 -1  1]
+ [-1 -1 -1  1 -1]] 
+sampleset energy: [-3.43 -3.43] 
+Chain strength: 1.5744875713958493, Ground state probability: 1.0
+Ground state is: Sample(sample={0: 1, 1: 1, 2: 1, 3: -1, 4: 1}, energy=-3.43, num_occurrences=113, chain_break_fraction=0.0), Ground state energy: -3.43
+------annealing = 1500, numread = 300
+sampleset info: {'timing': {'qpu_sampling_time': 560988.0, 'qpu_anneal_time_per_sample': 1500.0, 'qpu_readout_time_per_sample': 349.42, 'qpu_access_time': 571812.91, 'qpu_access_overhead_time': 1654.09, 'qpu_programming_time': 10824.91, 'qpu_delay_time_per_sample': 20.54, 'total_post_processing_time': 3754.0, 'post_processing_overhead_time': 3754.0}, 'problem_id': '90bc0c79-deab-4e89-835f-635a3800aa8e', 'embedding_context': {'embedding': {1: (457,), 0: (462,), 2: (459, 460), 3: (461, 456), 4: (458, 463)}, 'chain_break_method': 'majority_vote', 'embedding_parameters': {}, 'chain_strength': 1.5744875713958493}, 'warnings': []} 
+sampleset record: [[ 1  1  1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 1  1  1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 1  1  1 -1 -1]] 
+sampleset energy: [-3.43 -3.43 -2.59 -2.59 -2.01 -2.01] 
+Chain strength: 1.5744875713958493, Ground state probability: 0.9566666666666667
+Ground state is: Sample(sample={0: 1, 1: 1, 2: 1, 3: -1, 4: 1}, energy=-3.43, num_occurrences=129, chain_break_fraction=0.0), Ground state energy: -3.43

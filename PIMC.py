@@ -8,7 +8,15 @@ import dwave.inspector
 
 
 sampler = EmbeddingComposite(DWaveSampler(solver={'topology__type': 'chimera'}))
-
+# 5 1.437303932275054 1.7603306196848363 1.4084771918636099
+# 10 2.4336862877386793 2.6905414246207027 2.4218530095775836
+# 15 2.8855908574674958 3.0848263848716018 2.6936249017097964
+# 20 3.0368145502812656 3.1926485859071208 0.9959267202802318
+# 25 3.984207866387574 4.146895025132259 3.6573519600935334
+# 30 4.20514891434222 4.347736625376632 3.902802411942817
+# 35 4.598174944562244 4.731482983380952 3.9418880796710924
+# 40 5.0517254158757385 5.179637440963981  4.852756639272158
+# 45 5.234951058125942 5.352605097955065 4.340175646442815
 
 # N = [5,10,15,20,25,30,35,40,45]
 N = [20]
@@ -22,12 +30,13 @@ for index, value in enumerate(N):
     linear = [0] * value
     bqm = dimod.BQM.from_ising(linear,coupling)
     print(bqm)
-    chain_strength = uniform_torque_compensation(bqm)
     num_reads = 300
     annealing = 1500
+    chain_strength = 1.9959267202802318
     sampleset = sampler.sample_ising(linear,coupling, num_reads=num_reads, chain_strength=chain_strength, annealing_time=annealing)
+    # dwave.inspector.show(sampleset)
     # # Open a file to write the results
-    with open(f'./results/QA/a1500/b300/results_{value}.txt', "a+") as f:
+    with open(f'./results/PIMC/a1500/b300/results_{value}.txt', "a+") as f:
             # f.write(sampleset)
             f.write(f"------annealing = {annealing}, numread = {num_reads}\n")
             f.write(f"sampleset info: {str(sampleset.info)} \n")
@@ -39,3 +48,4 @@ for index, value in enumerate(N):
             # Write the results to the file
             f.write(f"Chain strength: {chain_strength}, Ground state probability: {ground_state_probability}\n")
             f.write(f"Ground state is: {sampleset.first}, Ground state energy: {sampleset.first.energy}\n")
+    
