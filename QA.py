@@ -11,7 +11,7 @@ sampler = EmbeddingComposite(DWaveSampler(solver={'topology__type': 'chimera'}))
 
 
 # N = [5,10,15,20,25,30,35,40,45]
-N = [45]
+N = [30]
 
 for index, value in enumerate(N):
     interactions_fname = './data/QA/SK_N'+str(value)+'/'+str(value)+'_SK_seed1'+'.txt'
@@ -23,11 +23,11 @@ for index, value in enumerate(N):
     bqm = dimod.BQM.from_ising(linear,coupling)
     print(bqm)
     chain_strength = uniform_torque_compensation(bqm)
-    num_reads = 300
-    annealing = 1500
+    num_reads = 400
+    annealing = 2000
     sampleset = sampler.sample_ising(linear,coupling, num_reads=num_reads, chain_strength=chain_strength, annealing_time=annealing)
     # # Open a file to write the results
-    with open(f'./results/QA/a1500/b300/results_{value}.txt', "a+") as f:
+    with open(f'./results/QA/a2000/b400/results_{value}.txt', "a+") as f:
             # f.write(sampleset)
             f.write(f"------annealing = {annealing}, numread = {num_reads}\n")
             f.write(f"sampleset info: {str(sampleset.info)} \n")

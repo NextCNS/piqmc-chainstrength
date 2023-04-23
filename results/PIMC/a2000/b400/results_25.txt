@@ -1,0 +1,162 @@
+------annealing = 2000, numread = 400
+sampleset info: {'timing': {'qpu_sampling_time': 947984.0, 'qpu_anneal_time_per_sample': 2000.0, 'qpu_readout_time_per_sample': 349.42, 'qpu_access_time': 959104.71, 'qpu_access_overhead_time': 1667.29, 'qpu_programming_time': 11120.71, 'qpu_delay_time_per_sample': 20.54, 'post_processing_overhead_time': 2122.0, 'total_post_processing_time': 2122.0}, 'problem_id': '067c78f4-8ed6-4f0f-aa83-10dda94e9166', 'embedding_context': {'embedding': {1: (677, 685, 1073, 433, 693, 561, 945, 817, 689), 0: (814, 1056, 928, 416, 806, 672, 544, 800), 2: (437, 424, 1048, 920, 792, 664, 536, 408, 413, 421, 429, 426), 3: (422, 430, 1067, 939, 811, 683, 427, 555), 4: (695, 679, 687, 552, 1064, 936, 808, 680), 5: (921, 1037, 1049, 1045, 1077, 1069, 1061, 1053), 6: (946, 1074, 1036, 1044, 1076, 1068, 1052, 1060), 7: (425, 553, 1065, 937, 809, 681), 8: (546, 418, 423, 431, 439, 1072, 944, 816, 688, 560, 432), 9: (1034, 906, 778, 821, 813, 805, 797, 789, 781), 10: (915, 1043, 1079, 1071, 1063, 1039, 1047, 1055), 11: (1033, 567, 559, 905, 777, 649, 521, 909, 527, 535, 543, 551), 12: (1066, 554, 682, 949, 933, 941, 938, 810), 13: (566, 558, 1041, 913, 550, 542, 534, 785, 657, 529), 14: (948, 940, 908, 916, 932, 924), 15: (911, 1059, 951, 943, 919, 931, 927, 935), 16: (820, 812, 1035, 907, 804, 796, 788, 779, 780), 17: (783, 1050, 823, 815, 807, 791, 922, 794, 799), 18: (297, 302, 1057, 417, 289, 545, 294, 673, 801, 929), 19: (565, 1051, 923, 795, 667, 539, 557, 549, 541), 20: (1032, 904, 776, 648, 692, 684, 676, 668, 660, 652), 21: (694, 674, 917, 1040, 912, 686, 784, 678, 670, 662, 656), 22: (1038, 1058, 930, 1046, 1078, 1070, 1054, 1062), 23: (914, 910, 950, 942, 918, 926, 934), 24: (420, 1075, 428, 947, 819, 563, 691, 435, 436)}, 'chain_break_method': 'majority_vote', 'embedding_parameters': {}, 'chain_strength': 3.6573519600935334}, 'warnings': [{'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (677, 685, 1073, 433, 693, 561, 945, 817, 689), 'source_variables': [1]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (814, 1056, 928, 416, 806, 672, 544, 800), 'source_variables': [0]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (437, 424, 1048, 920, 792, 664, 536, 408, 413, 421, 429, 426), 'source_variables': [2]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (422, 430, 1067, 939, 811, 683, 427, 555), 'source_variables': [3]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (695, 679, 687, 552, 1064, 936, 808, 680), 'source_variables': [4]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (921, 1037, 1049, 1045, 1077, 1069, 1061, 1053), 'source_variables': [5]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (946, 1074, 1036, 1044, 1076, 1068, 1052, 1060), 'source_variables': [6]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (546, 418, 423, 431, 439, 1072, 944, 816, 688, 560, 432), 'source_variables': [8]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (1034, 906, 778, 821, 813, 805, 797, 789, 781), 'source_variables': [9]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (915, 1043, 1079, 1071, 1063, 1039, 1047, 1055), 'source_variables': [10]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (1033, 567, 559, 905, 777, 649, 521, 909, 527, 535, 543, 551), 'source_variables': [11]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (1066, 554, 682, 949, 933, 941, 938, 810), 'source_variables': [12]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (566, 558, 1041, 913, 550, 542, 534, 785, 657, 529), 'source_variables': [13]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (911, 1059, 951, 943, 919, 931, 927, 935), 'source_variables': [15]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (820, 812, 1035, 907, 804, 796, 788, 779, 780), 'source_variables': [16]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (783, 1050, 823, 815, 807, 791, 922, 794, 799), 'source_variables': [17]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (297, 302, 1057, 417, 289, 545, 294, 673, 801, 929), 'source_variables': [18]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (565, 1051, 923, 795, 667, 539, 557, 549, 541), 'source_variables': [19]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (1032, 904, 776, 648, 692, 684, 676, 668, 660, 652), 'source_variables': [20]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (694, 674, 917, 1040, 912, 686, 784, 678, 670, 662, 656), 'source_variables': [21]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (1038, 1058, 930, 1046, 1078, 1070, 1054, 1062), 'source_variables': [22]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (420, 1075, 428, 947, 819, 563, 691, 435, 436), 'source_variables': [24]}}]} 
+sampleset record: [[-1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1 -1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1 -1  1  1 -1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1 -1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1 -1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1 -1  1  1  1 -1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1  1 -1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1  1 -1  1 -1  1  1  1 -1  1  1 -1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [-1  1 -1  1 -1  1  1  1 -1  1 -1  1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1  1 -1  1 -1  1  1  1 -1  1  1 -1  1  1  1 -1  1 -1 -1  1 -1 -1  1 -1
+   1]
+ [-1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1 -1  1 -1  1  1 -1  1  1 -1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1 -1  1 -1  1  1 -1  1  1 -1  1
+  -1]
+ [ 1  1 -1  1 -1  1  1  1 -1  1  1 -1  1  1 -1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [-1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1 -1  1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1  1 -1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1  1  1 -1  1  1 -1  1  1 -1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1  1 -1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1 -1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1  1 -1 -1  1 -1 -1 -1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1 -1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1 -1  1  1  1  1 -1  1  1 -1 -1  1 -1  1 -1 -1
+   1]
+ [ 1 -1 -1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1  1 -1 -1 -1  1 -1  1 -1  1  1
+  -1]] 
+sampleset energy: [-54.94 -54.94 -54.12 -54.12 -53.42 -53.42 -52.56 -52.56 -54.12 -54.12
+ -51.9  -51.9  -51.88 -50.76 -50.66 -50.66 -50.44 -49.94 -49.94 -49.94
+ -49.94 -53.42 -54.94 -49.64 -48.92 -54.12 -48.46 -54.12 -52.56 -53.42
+ -46.84 -45.94 -47.18] 
+Chain strength: 3.6573519600935334, Ground state probability: 0.3725
+Ground state is: Sample(sample={0: -1, 1: 1, 2: -1, 3: 1, 4: -1, 5: 1, 6: 1, 7: 1, 8: -1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: -1, 16: 1, 17: -1, 18: -1, 19: 1, 20: -1, 21: -1, 22: -1, 23: -1, 24: 1}, energy=-54.93999999999998, num_occurrences=50, chain_break_fraction=0.0), Ground state energy: -54.93999999999998
+------annealing = 2000, numread = 400
+sampleset info: {'timing': {'qpu_sampling_time': 947984.0, 'qpu_anneal_time_per_sample': 2000.0, 'qpu_readout_time_per_sample': 349.42, 'qpu_access_time': 959096.51, 'qpu_access_overhead_time': 1722.49, 'qpu_programming_time': 11112.51, 'qpu_delay_time_per_sample': 20.54, 'post_processing_overhead_time': 799.0, 'total_post_processing_time': 799.0}, 'problem_id': '8e01d167-d544-4f0d-aaea-e334059cad15', 'embedding_context': {'embedding': {1: (709, 184, 312, 701, 824, 696, 440, 568), 0: (335, 560, 327, 303, 319, 432, 304, 311), 2: (829, 837, 194, 322, 834, 578, 450, 706), 3: (692, 186, 314, 826, 700, 442, 698, 570), 4: (454, 691, 446, 430, 438, 563, 179, 307, 435), 5: (822, 185, 830, 313, 697, 441, 825, 569), 6: (592, 336, 471, 464, 431, 439, 447, 463, 455), 7: (686, 192, 320, 694, 702, 710, 448, 576, 704), 8: (687, 695, 703, 193, 711, 321, 705, 449, 577), 9: (595, 467, 339, 342, 302, 310, 318, 326, 334), 10: (468, 428, 579, 451, 436, 460, 444, 452), 11: (593, 557, 565, 597, 573, 589, 581), 12: (839, 815, 823, 831, 187, 315, 699, 443, 827, 571), 13: (594, 466, 469, 461, 429, 437, 445, 453), 14: (329, 556, 564, 572, 580, 588, 585, 457), 15: (821, 171, 299, 817, 689, 555, 427, 683, 685, 693), 16: (172, 562, 188, 180, 196, 434, 306, 178), 17: (587, 598, 590, 558, 566, 574, 582), 18: (836, 828, 820, 812, 169, 297, 681, 425, 809, 553), 19: (175, 561, 199, 191, 433, 305, 183, 177), 20: (559, 567, 575, 599, 591, 583), 21: (584, 331, 456, 328, 332, 300, 308, 316, 324), 22: (554, 426, 333, 325, 298, 317, 309, 301), 23: (552, 424, 296, 198, 190, 182, 174, 168), 24: (586, 458, 330, 173, 181, 189, 197, 205, 202)}, 'chain_break_method': 'majority_vote', 'embedding_parameters': {}, 'chain_strength': 3.6573519600935334}, 'warnings': [{'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (709, 184, 312, 701, 824, 696, 440, 568), 'source_variables': [1]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (335, 560, 327, 303, 319, 432, 304, 311), 'source_variables': [0]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (829, 837, 194, 322, 834, 578, 450, 706), 'source_variables': [2]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (692, 186, 314, 826, 700, 442, 698, 570), 'source_variables': [3]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (454, 691, 446, 430, 438, 563, 179, 307, 435), 'source_variables': [4]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (822, 185, 830, 313, 697, 441, 825, 569), 'source_variables': [5]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (592, 336, 471, 464, 431, 439, 447, 463, 455), 'source_variables': [6]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (686, 192, 320, 694, 702, 710, 448, 576, 704), 'source_variables': [7]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (687, 695, 703, 193, 711, 321, 705, 449, 577), 'source_variables': [8]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (595, 467, 339, 342, 302, 310, 318, 326, 334), 'source_variables': [9]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (468, 428, 579, 451, 436, 460, 444, 452), 'source_variables': [10]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (839, 815, 823, 831, 187, 315, 699, 443, 827, 571), 'source_variables': [12]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (594, 466, 469, 461, 429, 437, 445, 453), 'source_variables': [13]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (329, 556, 564, 572, 580, 588, 585, 457), 'source_variables': [14]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (821, 171, 299, 817, 689, 555, 427, 683, 685, 693), 'source_variables': [15]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (172, 562, 188, 180, 196, 434, 306, 178), 'source_variables': [16]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (836, 828, 820, 812, 169, 297, 681, 425, 809, 553), 'source_variables': [18]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (175, 561, 199, 191, 433, 305, 183, 177), 'source_variables': [19]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (584, 331, 456, 328, 332, 300, 308, 316, 324), 'source_variables': [21]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (554, 426, 333, 325, 298, 317, 309, 301), 'source_variables': [22]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (552, 424, 296, 198, 190, 182, 174, 168), 'source_variables': [23]}}, {'type': <class 'dwave.system.warnings.ChainLengthWarning'>, 'message': 'Chain length greater than 7', 'level': 30, 'data': {'target_variables': (586, 458, 330, 173, 181, 189, 197, 205, 202), 'source_variables': [24]}}]} 
+sampleset record: [[ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1 -1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1 -1  1  1 -1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1 -1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1  1 -1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1  1 -1  1 -1  1  1  1 -1  1  1 -1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [-1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1  1 -1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1 -1  1  1  1 -1  1 -1 -1  1 -1 -1  1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [-1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1 -1  1  1 -1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1 -1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [-1  1 -1  1 -1  1  1  1 -1  1  1 -1  1  1  1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1  1  1 -1 -1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1  1 -1 -1 -1  1  1  1 -1  1  1 -1  1  1 -1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1  1  1 -1 -1 -1  1 -1 -1  1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1  1 -1  1 -1  1  1  1 -1  1  1  1  1  1 -1 -1  1 -1 -1  1 -1 -1 -1 -1
+   1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [ 1 -1  1  1  1 -1 -1 -1  1 -1 -1  1 -1 -1 -1  1 -1  1  1 -1  1  1 -1  1
+  -1]
+ [ 1 -1  1 -1  1 -1 -1 -1  1 -1 -1  1 -1 -1  1  1 -1  1  1 -1  1  1  1  1
+  -1]
+ [-1 -1  1 -1  1 -1 -1 -1  1 -1 -1 -1 -1 -1 -1  1 -1  1  1 -1  1  1  1  1
+  -1]] 
+sampleset energy: [-54.94 -54.94 -54.12 -54.12 -53.42 -53.42 -54.94 -52.56 -52.56 -51.9
+ -51.88 -51.88 -50.9  -50.9  -50.76 -50.7  -54.94 -54.94 -54.94 -54.94
+ -54.94 -49.94 -54.12 -53.42 -54.94 -54.94 -54.94 -52.56 -52.56 -52.56
+ -47.1  -54.12 -53.42 -47.42 -47.42 -47.28 -54.12 -46.26 -53.42 -50.9 ] 
+Chain strength: 3.6573519600935334, Ground state probability: 0.795
+Ground state is: Sample(sample={0: 1, 1: -1, 2: 1, 3: -1, 4: 1, 5: -1, 6: -1, 7: -1, 8: 1, 9: -1, 10: -1, 11: -1, 12: -1, 13: -1, 14: -1, 15: 1, 16: -1, 17: 1, 18: 1, 19: -1, 20: 1, 21: 1, 22: 1, 23: 1, 24: -1}, energy=-54.93999999999998, num_occurrences=158, chain_break_fraction=0.0), Ground state energy: -54.93999999999998

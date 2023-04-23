@@ -1,0 +1,20 @@
+------annealing = 2000, numread = 400
+sampleset info: {'timing': {'qpu_sampling_time': 947984.0, 'qpu_anneal_time_per_sample': 2000.0, 'qpu_readout_time_per_sample': 349.42, 'qpu_access_time': 958792.91, 'qpu_access_overhead_time': 1100.09, 'qpu_programming_time': 10808.91, 'qpu_delay_time_per_sample': 20.54, 'total_post_processing_time': 817.0, 'post_processing_overhead_time': 817.0}, 'problem_id': 'b436c6d5-3045-4c05-a7e0-54c9a05614a6', 'embedding_context': {'embedding': {1: (1664, 1671), 0: (1668,), 2: (1670, 1665), 3: (1666, 1669), 4: (1667,)}, 'chain_break_method': 'majority_vote', 'embedding_parameters': {}, 'chain_strength': 1.5744875713958493}, 'warnings': []} 
+sampleset record: [[-1 -1 -1  1 -1]
+ [ 1  1  1 -1  1]
+ [ 1  1  1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1  1 -1  1 -1]] 
+sampleset energy: [-3.43 -3.43 -2.59 -2.59 -0.37] 
+Chain strength: 1.5744875713958493, Ground state probability: 0.975
+Ground state is: Sample(sample={0: -1, 1: -1, 2: -1, 3: 1, 4: -1}, energy=-3.43, num_occurrences=287, chain_break_fraction=0.0), Ground state energy: -3.43
+------annealing = 2000, numread = 400
+sampleset info: {'timing': {'qpu_sampling_time': 947984.0, 'qpu_anneal_time_per_sample': 2000.0, 'qpu_readout_time_per_sample': 349.42, 'qpu_access_time': 958821.51, 'qpu_access_overhead_time': 996.49, 'qpu_programming_time': 10837.51, 'qpu_delay_time_per_sample': 20.54, 'total_post_processing_time': 933.0, 'post_processing_overhead_time': 933.0}, 'problem_id': '658fdc59-4e5b-41d1-9352-f8b9e9c4f80e', 'embedding_context': {'embedding': {1: (1541,), 0: (1538, 1543), 2: (1536,), 3: (1539, 1540), 4: (1542, 1537)}, 'chain_break_method': 'majority_vote', 'embedding_parameters': {}, 'chain_strength': 1.5744875713958493}, 'warnings': []} 
+sampleset record: [[-1 -1 -1  1 -1]
+ [ 1  1  1 -1  1]
+ [ 1  1  1  1  1]
+ [-1 -1 -1 -1 -1]
+ [ 1  1  1 -1 -1]] 
+sampleset energy: [-3.43 -3.43 -2.59 -2.59 -2.01] 
+Chain strength: 1.5744875713958493, Ground state probability: 0.975
+Ground state is: Sample(sample={0: -1, 1: -1, 2: -1, 3: 1, 4: -1}, energy=-3.43, num_occurrences=198, chain_break_fraction=0.0), Ground state energy: -3.43

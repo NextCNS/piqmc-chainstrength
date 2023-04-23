@@ -1,0 +1,47 @@
+------annealing = 2000, numread = 400
+sampleset info: {'timing': {'qpu_sampling_time': 947984.0, 'qpu_anneal_time_per_sample': 2000.0, 'qpu_readout_time_per_sample': 349.42, 'qpu_access_time': 958869.11, 'qpu_access_overhead_time': 862.89, 'qpu_programming_time': 10885.11, 'qpu_delay_time_per_sample': 20.54, 'post_processing_overhead_time': 1927.0, 'total_post_processing_time': 1927.0}, 'problem_id': 'c44f699e-5484-43af-b85a-efd5abc31674', 'embedding_context': {'embedding': {1: (650, 783, 778), 0: (640, 781, 773, 768), 2: (782, 774, 643, 771), 3: (659, 663, 655, 647), 4: (642, 770, 780, 772), 5: (525, 521, 777, 649), 6: (641, 654, 646), 7: (653, 779, 651), 8: (660, 644, 652), 9: (776, 648, 520)}, 'chain_break_method': 'majority_vote', 'embedding_parameters': {}, 'chain_strength': 2.4218530095775836}, 'warnings': []} 
+sampleset record: [[-1  1  1  1 -1 -1  1 -1 -1  1]
+ [ 1 -1 -1 -1  1  1 -1  1  1 -1]
+ [ 1 -1  1 -1  1  1 -1  1  1 -1]
+ [-1  1 -1  1 -1 -1  1 -1 -1  1]
+ [ 1 -1  1 -1  1  1 -1  1  1 -1]
+ [ 1 -1 -1 -1  1 -1 -1  1  1 -1]
+ [-1  1  1  1 -1  1  1 -1 -1  1]
+ [-1  1  1  1 -1  1  1  1 -1 -1]
+ [ 1 -1  1  1  1  1 -1  1  1 -1]
+ [ 1  1  1  1 -1  1  1  1 -1 -1]
+ [-1  1 -1  1 -1 -1  1 -1 -1 -1]
+ [ 1 -1  1 -1  1  1  1  1  1 -1]
+ [ 1 -1 -1 -1  1  1 -1  1  1  1]
+ [ 1 -1  1  1  1  1 -1  1  1  1]
+ [-1 -1 -1 -1 -1 -1 -1 -1  1  1]
+ [ 1  1  1  1 -1  1  1  1  1 -1]
+ [ 1 -1  1 -1  1  1 -1  1  1  1]
+ [ 1 -1  1 -1  1  1 -1 -1  1 -1]] 
+sampleset energy: [-11.69 -11.69 -11.17 -11.17 -11.17  -9.61  -9.61  -9.31  -9.29  -9.21
+  -7.89  -7.73  -7.41  -7.37  -7.15  -6.91  -7.89  -5.39] 
+Chain strength: 2.4218530095775836, Ground state probability: 0.7125
+Ground state is: Sample(sample={0: -1, 1: 1, 2: 1, 3: 1, 4: -1, 5: -1, 6: 1, 7: -1, 8: -1, 9: 1}, energy=-11.69, num_occurrences=41, chain_break_fraction=0.0), Ground state energy: -11.69
+------annealing = 2000, numread = 400
+sampleset info: {'timing': {'qpu_sampling_time': 947984.0, 'qpu_anneal_time_per_sample': 2000.0, 'qpu_readout_time_per_sample': 349.42, 'qpu_access_time': 958889.11, 'qpu_access_overhead_time': 2008.89, 'qpu_programming_time': 10905.11, 'qpu_delay_time_per_sample': 20.54, 'post_processing_overhead_time': 1392.0, 'total_post_processing_time': 1392.0}, 'problem_id': '953202c1-4705-4332-9cdb-e2a2d319f767', 'embedding_context': {'embedding': {1: (1051, 1053, 1069, 1061), 0: (1189, 1058, 1186), 2: (1068, 1060, 1052), 3: (1316, 1313, 1185, 1057), 4: (1196, 1064, 1188, 1192), 5: (1062, 1065, 1070), 6: (1056, 1184, 1312), 7: (1067, 1190, 1198, 1195), 8: (1059, 1063, 1071), 9: (1191, 1199, 1066, 1194)}, 'chain_break_method': 'majority_vote', 'embedding_parameters': {}, 'chain_strength': 2.4218530095775836}, 'warnings': []} 
+sampleset record: [[ 1 -1 -1 -1  1  1 -1  1  1 -1]
+ [-1  1  1  1 -1 -1  1 -1 -1  1]
+ [ 1 -1  1 -1  1  1 -1  1  1 -1]
+ [-1  1 -1  1 -1 -1  1 -1 -1  1]
+ [-1  1  1  1 -1 -1  1 -1 -1  1]
+ [-1  1  1  1 -1  1  1 -1 -1  1]
+ [ 1 -1 -1 -1  1 -1 -1 -1  1  1]
+ [-1  1  1  1 -1  1  1  1 -1 -1]
+ [-1  1 -1 -1 -1 -1  1 -1 -1  1]
+ [ 1 -1  1  1  1  1 -1  1  1 -1]
+ [-1 -1 -1 -1  1 -1 -1 -1  1  1]
+ [-1  1  1  1 -1  1  1 -1 -1  1]
+ [ 1 -1 -1 -1  1 -1 -1  1  1  1]
+ [ 1 -1 -1 -1  1  1 -1 -1  1 -1]
+ [ 1 -1  1 -1  1  1 -1  1  1  1]
+ [ 1 -1  1 -1  1  1  1  1  1 -1]
+ [-1 -1 -1 -1 -1 -1 -1 -1 -1  1]] 
+sampleset energy: [-11.69 -11.69 -11.17 -11.17 -11.69  -9.61  -9.31  -9.31  -9.29  -9.29
+  -9.21  -9.61  -8.41  -8.23  -7.89  -7.73  -7.57] 
+Chain strength: 2.4218530095775836, Ground state probability: 0.8775
+Ground state is: Sample(sample={0: 1, 1: -1, 2: -1, 3: -1, 4: 1, 5: 1, 6: -1, 7: 1, 8: 1, 9: -1}, energy=-11.69, num_occurrences=168, chain_break_fraction=0.0), Ground state energy: -11.69
