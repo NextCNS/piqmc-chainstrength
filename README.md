@@ -1,12 +1,3 @@
-# Simulated Classical and Quantum Annealing
-
-[![License](https://img.shields.io/badge/License-Do%20No%20Harm-blue)](https://github.com/therooler/piqmc/blob/master/LICENSE.md)
-
-This repository contains an implementation of simulated annealing (SA) and simulated quantum annealing (SQA) with path integral monte carlo (PIQMC). The interface to the code is written in Python 3 and the Monte Carlo sampling is written in Cython. This code was used to produce some of the results of this paper https://arxiv.org/abs/2101.10154.
-
-Here, we have an implementation that supports the 2D Edwards-Anderson model, the Sherrington-Kirkpatrick model and the Wishart Planted Ensemble.
-
-We note that this code is an adaptation from [Hadayat Seddiqi's Cython code](https://github.com/hadsed/pathintegral-qmc/). We fixed some bugs, added global moves to the quantum annealing monte carlo dynamics and stripped the code of things that were not needed for our purposes.
 
 ## Installation
 In order to call the Cython code, we need to install the package. First, install the packages in `environment.yml` and then run
@@ -23,6 +14,10 @@ python run_<EXPERIMENT>.py --<ARG1>=<VALUE1> --<ARG2>=<VALUE2>  ...
 See the respective files to see which arguments can be passed.
 We can save the residual energies, the MC times tested and the experiement parameters in the `./results/` folder.
 
+To run the GAC algorithm
+```bash
+python GAC_algorithm.py  ...
+```
 ## Content
 
 This implementation consists of 4 parts:
@@ -90,22 +85,3 @@ Per default, these arrays are linearly spaced, beginning at **T_0** and ending w
 
 **seed**: Random seed to identify the random instance of couplings to be imported from the `data` folder.
 
-## Speed illustration of our code
-
-Using an `Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz`, the typical number of monte carlo steps for PIQMC with 20 trotter slices on the 2D Edwards-Anderson model with 40x40 spins is ~50 per second. For SA, ~2000 monte carlo steps per second are performed on the same model. Similarly for the Sherrington-Kirkpatrick model with 100 spins, we have ~50 iterations per second for PIQMC with 100 trotter slices, while ~9000 iteractions per second for SA.
-
-## License
-
-This code is licensed under the [Do No Harm](https://github.com/therooler/piqmc/blob/master/LICENSE.md) license and is intended for academic research that will be beneficial to humanity.
-
-## Citing
-```bibtex
-@misc{VNA2021,
-      title={Variational Neural Annealing}, 
-      author={Mohamed Hibat-Allah and Estelle M. Inack and Roeland Wiersema and Roger G. Melko and Juan Carrasquilla},
-      year={2021},
-      eprint={2101.10154},
-      archivePrefix={arXiv},
-      primaryClass={cond-mat.dis-nn}
-}
-```
