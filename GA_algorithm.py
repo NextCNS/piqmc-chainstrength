@@ -9,7 +9,7 @@ import math
 from dwave.embedding.chain_strength import uniform_torque_compensation
 
 # Parameters
-NUM_GENERATIONS = 5
+NUM_GENERATIONS = 10
 
 
 output = []
